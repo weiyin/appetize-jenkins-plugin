@@ -1,0 +1,29 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <f:entry name="platform" title="Platform" field="platform">
+        <select name="platform">
+            <j:choose>
+                <j:when test="${instance.platform eq 'ios'}">
+                    <option value="ios" selected="selected">iOS</option>
+                </j:when>
+                <j:otherwise>
+                   <option value="ios">iOS</option>
+                </j:otherwise>
+            </j:choose>
+            <j:choose>
+                <j:when test="${instance.platform eq 'android'}">
+                    <option value="android" selected="selected">Android</option>
+                </j:when>
+                <j:otherwise>
+                   <option value="android">Android</option>
+                </j:otherwise>
+            </j:choose>
+        </select>
+    </f:entry>
+    <f:entry title="Path to app" field="appPath">
+        <f:textbox />
+    </f:entry>
+    <f:entry title="Choose API Token" field="apiTokenId">
+        <f:select/>
+    </f:entry>
+</j:jelly>

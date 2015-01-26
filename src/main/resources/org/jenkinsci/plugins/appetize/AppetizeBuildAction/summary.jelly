@@ -1,0 +1,13 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+    xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+    <t:summary icon="/plugin/appetize/images/logo-96.png">
+        <a href="${it.publicUrl}" target="_blank">View on Appetize.io</a>
+        <br/>
+        <a href="${it.manageUrl}" target="_blank">Manage App Settings</a>
+        <br/>
+        <div style="padding-top: 10px;">
+            ${it.getEmbedHtml()}
+        </div>
+    </t:summary>
+</j:jelly>

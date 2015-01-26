@@ -1,0 +1,21 @@
+<div>
+    <p>The output location of your app, relative to the project workspace.</p>
+
+    <h4>iOS</h4>
+    <p>Specify the ".app" folder that contains the simulator build, e.g.
+        <tt>build/Release-iphonesimulator/example.app</tt></p>
+
+    <p>Note that iOS apps require a simulator build. To create a build with a script, use the command:</p>
+
+    <p><tt>xcodebuild -sdk iphonesimulator</tt></p>
+
+    <p>
+        If you are using the Jenkins Xcode plugin, specify <tt>iphonesimulator</tt> for SDK
+        under "Advanced Xcode build options".
+    </p>
+
+    <h4>Android</h4>
+    <p>Specify the location of your apk, e.g. <tt>app/build/outputs/apk/app-release.apk</tt></p>
+
+    <p>Android apps that use the NDK (very few do) must include the x86 instruction set.</p>
+</div>

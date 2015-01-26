@@ -1,0 +1,23 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+    xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+    <j:choose>
+        <j:when test="${it.getLastAppetizeBuild() != null}">
+            <table style="margin-left:1em; margin-top:1em;">
+                <tr>
+                <td>
+                <img style="width: 48px; height: 48px;" class="icon-xlg" src="${rootURL}/plugin/appetize/images/logo-96.png"/>
+                </td>
+                <td style="vertical-align:middle">
+                    <a href="${it.getLastAppetizeBuild().getPublicUrl()}" target="_blank">View on Appetize.io</a>
+                    <br/>
+                    <a href="${it.getLastAppetizeBuild().getManageUrl()}" target="_blank">Manage App Settings</a>
+                    <br/>
+                    <span style="opacity:.6;">Last Successful Build (#${it.getLastAppetizeBuild().getBuildNumber()})</span>
+                </td>
+                </tr>
+            </table>
+        </j:when>
+        <j:otherwise></j:otherwise>
+    </j:choose>
+</j:jelly>

@@ -1,0 +1,6 @@
+<?jelly escape-by-default='true'?>
+<div>
+  Stream iOS &amp; Android builds directly within Jenkins via
+  <a href="https://appetize.io/demo" target="_blank">Appetize.io's</a>
+  cloud-based iOS Simulators &amp; Android Emulators.
+</div>

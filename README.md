@@ -1,3 +1,8 @@
-# appetize-jenkins-plugin
+# appetize-plugin
 
-This Jenkins plugin allows uploading iOS and Android builds to [Appetize.io](https://appetize.io/ "Appetize.io") for streaming to web browsers.
+Stream iOS & Android builds directly within Jenkins via Appetize.io's cloud-based iOS Simulators & Android Emulators.
+
+Demos: [iPhone](https://appetize.io/demo?device=iphone), [iPad](https://appetize.io/demo?device=ipad), [Nexus 5](https://appetize.io/demo?device=nexus5)
+
+![Plugin Screenshot](https://appetize.io/images/jenkins-plugin-screenshot.png)
+

@@ -49,6 +49,8 @@ import java.util.*;
  * Developers: Weiyin He and John Snyder
  */
 public class AppetizeRecorder extends Recorder {
+    // For production use, please request an API token. This token is for temporary use when
+    // first setting up projects.
     private static final String PLACEHOLDER_API_TOKEN = "tok_7vkmr5quwwjjxy4rv1q1h0rn08";
     private static final String PLACEHOLDER_ID = "placeholder";
 

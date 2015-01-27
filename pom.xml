@@ -14,9 +14,9 @@
   <version>1.0.1-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
-  <name>Jenkins Appetize.io Plugin</name>
+  <name>Appetize.io Plugin</name>
   <description>Stream iOS &amp; Android builds directly within Jenkins via Appetize.io's cloud-based iOS Simulators &amp; Android Emulators.</description>
-  <url>https://wiki.jenkins-ci.org/display/JENKINS/Appetize+Plugin</url>
+  <url>https://wiki.jenkins-ci.org/display/JENKINS/Appetize.io+Plugin</url>
   <licenses>
     <license>
       <name>MIT License</name>
@@ -32,7 +32,7 @@
     <developer>
       <id>jcsnyder</id>
       <name>John Snyder</name>
-      <email>weiyin@appetize.io</email>
+      <email>john@appetize.io</email>
     </developer>
   </developers>
   <scm>

@@ -24,17 +24,28 @@
 
 package org.jenkinsci.plugins.appetize;
 
-import hudson.model.Action;
+import hudson.EnvVars;
+import hudson.model.AbstractBuild;
+import hudson.model.EnvironmentContributingAction;
 
 /**
  * Developers: Weiyin He and John Snyder
  */
-public class AppetizeBuildAction extends AppetizeApp implements Action {
+public class AppetizeBuildAction extends AppetizeApp implements EnvironmentContributingAction {
     private int buildNumber;
 
     public AppetizeBuildAction(String platform, String privateKey, String publicKey, String publicUrl, String manageUrl, int buildNumber) {
         super(platform, privateKey, publicKey, publicUrl, manageUrl);
         this.buildNumber = buildNumber;
+    }
+
+    public void buildEnvVars(AbstractBuild<?, ?> abstractBuild, EnvVars envVars) {
+        if (envVars == null) return;
+
+        envVars.put("APPETIZEIO_PUBLIC_KEY", getPublicKey());
+        envVars.put("APPETIZEIO_PRIVATE_KEY", getPrivateKey());
+        envVars.put("APPETIZEIO_PUBLIC_URL", getPublicUrl());
+        envVars.put("APPETIZEIO_MANAGE_URL", getManageUrl());
     }
 
     @Override
